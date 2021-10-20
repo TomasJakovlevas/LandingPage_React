@@ -13,6 +13,10 @@ export const StyledHeader = styled.header`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  .logo {
+    font-size: 26px;
+  }
 `;
 
 export const StyledNavigation = styled.nav`

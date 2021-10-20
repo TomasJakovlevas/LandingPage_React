@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <>
       <StyledHeader>
-        <div>LOGO</div>
+        <div className='logo'>LOGO</div>
         <StyledNavigation>
           <ul>
             <li>
@@ -58,10 +58,12 @@ const Header = () => {
             </div>
           </div>
         </StyledNavigation>
+
         <MobileMenuButton onClick={(e) => showMenu(e)}>
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </MobileMenuButton>
       </StyledHeader>
+
       {menuOpen && (
         <StyledMobileNavigation>
           <ul
