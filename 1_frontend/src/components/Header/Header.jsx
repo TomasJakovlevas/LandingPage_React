@@ -11,7 +11,7 @@ import {
 
 // Fontawesom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Hamburger
 import { Sling as Hamburger } from 'hamburger-react';
@@ -21,6 +21,7 @@ const Header = () => {
   // -- state
   // --- local
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   // Custom functions
   const showMenu = () => setMenuOpen((prev) => !prev);
@@ -58,12 +59,17 @@ const Header = () => {
           </div>
         </StyledNavigation>
         <MobileMenuButton onClick={(e) => showMenu(e)}>
-          <Hamburger />
+          <Hamburger toggled={isOpen} toggle={setOpen} />
         </MobileMenuButton>
       </StyledHeader>
       {menuOpen && (
         <StyledMobileNavigation>
-          <ul onClick={() => setMenuOpen(false)}>
+          <ul
+            onClick={() => {
+              setMenuOpen(false);
+              setOpen(false);
+            }}
+          >
             <li>
               <Link to='/'>Home</Link>
             </li>

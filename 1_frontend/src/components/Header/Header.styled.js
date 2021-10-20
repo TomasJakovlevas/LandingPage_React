@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Mint, Lightgrey } from '../Colors/colors';
 
 export const StyledHeader = styled.header`
   width: 90%;
@@ -42,7 +43,7 @@ export const StyledNavigation = styled.nav`
 
     .quiclCall_div__phone {
       margin: 0 10px 0 18px;
-      background-color: #61c3a1;
+      background-color: ${Mint};
       color: white;
 
       display: flex;
@@ -75,7 +76,7 @@ export const StyledMobileNavigation = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background-color: #f4f4f4;
+  background-color: ${Lightgrey};
   width: 90%;
   margin: 0 auto;
 
@@ -109,7 +110,7 @@ export const MobileMenuButton = styled.div`
   font-size: 30px;
   width: 50px;
   height: 50px;
-  background-color: #61c3a1;
+  background-color: ${Mint};
   color: white;
   cursor: pointer;
 
