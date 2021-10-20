@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   height: 90px;
   left: 0px;
   top: 0px;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +28,11 @@ export const StyledHeader = styled.header`
     display: inline;
     padding: 5px 8px;
     margin: 0 10px;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: black;
   }
 
   .quickCall_div {
@@ -53,10 +65,59 @@ export const StyledHeader = styled.header`
       font-weight: 600;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
-export const StyledNavigation = styled.nav`
+export const StyledMobileNavigation = styled.nav`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #f4f4f4;
+  width: 90%;
+  margin: 0 auto;
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul li {
+    text-align: right;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    margin: 5px 0;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .quickCall_div {
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileMenuButton = styled.div`
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #61c3a1;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
 `;
