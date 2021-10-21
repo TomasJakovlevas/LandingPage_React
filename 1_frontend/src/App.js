@@ -1,16 +1,14 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Button from './components/Buttons/Button';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 function App() {
   return (
     <>
       <Router>
         <Header />
-        <main>
-          <Switch>{/* Route's */}</Switch>
-        </main>
+        <Main />
         <Footer />
       </Router>
     </>
